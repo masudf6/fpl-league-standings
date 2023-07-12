@@ -1,0 +1,38 @@
+
+body {
+  background-color: #182747;
+}
+
+.container {
+  margin-top: 10em;
+}
+
+.home-text > h1, .home-text > p{
+  color: aliceblue;
+  text-align: center;
+}
+
+.modal-content {
+  background: #E4A11B;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.dash > h1, .dash > h2, .dash > p {
+  color: aliceblue;
+}
+
+.reset-pass-text > h1 {
+  color: aliceblue;
+}

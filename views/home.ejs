@@ -1,0 +1,103 @@
+<%- include('partials/header') %>
+
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5 justify-content-center">
+      <div class="col-lg-7 text-center text-lg-start home-text">
+          <h1 class="display-5 fw-medium">Lakaka League</h1>
+          <p class="lead mb-4">$$$ every week!</p>
+      </div>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-2">
+          <button type="button" class="btn btn-outline-warning btn-md px-4 gap-3" role="button" data-bs-toggle="modal" data-bs-target="#regModal">
+              Register
+          </button>
+          <button type="button" class="btn btn-outline-warning btn-md px-4" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      </div>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-3">
+        <a href="" data-bs-toggle="modal" data-bs-target="#resetpassModal">Forgot Password?</a>
+      </div>
+  </div>
+</div>
+
+
+<!-- Registration Modal -->
+<div class="modal fade" id="regModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Register</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-5 pt-0">
+            <form class="" action="/register" method="POST">
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="FPL ID" name="managerID" required>
+                  <label for="floatingInput">FPL ID</label>
+                </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com" name="username" required>
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password" name="password" required>
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-outline-primary" type="submit">Sign up</button>
+            </form>
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Login</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-5 pt-0">
+            <form class="" action="/login" method="POST">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com" name="username" required>
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password" name="password" required>
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-outline-primary" type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+  </div>
+</div>
+
+
+<!-- Password Reset Modal -->
+<div class="modal fade" id="resetpassModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Enter email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-5 pt-0">
+            <form class="" action="/forgot-password" method="POST">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com" name="username" required>
+                <label for="floatingInput">Email address</label>
+              </div>
+              <button id="reset-pass" class="w-100 mb-2 btn btn-lg rounded-3 btn-outline-primary" type="submit">Send password reset link</button>
+            </form>
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+<%- include('partials/footer') %>

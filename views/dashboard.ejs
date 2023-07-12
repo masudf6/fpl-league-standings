@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container dash">
+    <h1 class="display-3">Hej You!</h1>
+    <h2>username: <%= session_user %></h2>
+    <h2>manager: <%= session_id %></h2>
+    <h2>$$$ Accumulated: <%= total_amount %></h2>
+    <hr>
+    <table class="table table-striped table-hover table-dark table-bordered border-warning">
+      <thead>
+        <tr>
+          <th>GameWeek</th>
+          <th>Net Points</th>
+          <th>Standing</th>
+          <th>$$$$$$</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for(var i=0; i<=37; i++) { %>
+            <% const gw = i+1; %>
+            <% let rank_gw = gw_rank[i].rank %>
+            <% let points_gw = gw_rank[i].points %>
+            <%let money_gw = gw_rank[i].amount %>
+              <tr>
+                <td><%= gw %></td>
+                <td><%= points_gw %></td>
+                <td><%= rank_gw %></td>
+                <td><%= money_gw %></td>
+              </tr>
+          <% } %>
+      </tbody>
+    </table>
+    <hr>
+    <form action="/logout" method="POST">
+      <button class="btn btn-light btn-lg">logout</button>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
